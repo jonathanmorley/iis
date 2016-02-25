@@ -22,6 +22,7 @@ end
 
 group :kitchen_vagrant do
   gem 'kitchen-vagrant', '~> 0.19'
+  gem 'vagrant-winrm'
 end
 
 group :kitchen_cloud do
