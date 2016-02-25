@@ -5,9 +5,9 @@ rvm:
   - 2.0.0
 
 install:
-  - sudo echo 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' > /etc/apt/sources.list
   - sudo apt-get update -q
-  - sudo apt-get install -q virtualbox-5.0
+  - sudo wget -nv http://download.virtualbox.org/virtualbox/5.0.14/virtualbox-5.0_5.0.14-105127~Ubuntu~precise_amd64.deb
+  - sudo dpkg -i virtualbox-5.0_5.0.14-105127~Ubuntu~precise_amd64.deb
   - sudo wget -nv https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
   - sudo dpkg -i vagrant_1.8.1_x86_64.deb
   - bundle install
