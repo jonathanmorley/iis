@@ -21,6 +21,8 @@
 include Opscode::IIS::Helper
 include Opscode::IIS::Processors
 
+use_inline_resources
+
 action :add do
   @was_updated = false
 

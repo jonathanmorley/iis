@@ -26,6 +26,8 @@ include REXML
 include Opscode::IIS::Helper
 include Opscode::IIS::Processors
 
+use_inline_resources
+
 action :add do
   if !@current_resource.exists
     cmd = "#{appcmd(node)} add site /name:\"#{new_resource.site_name}\""

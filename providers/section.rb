@@ -26,6 +26,8 @@ include REXML
 include Opscode::IIS::Helper
 include Opscode::IIS::Processors
 
+use_inline_resources
+
 action :lock do
   @current_resource.exists = new_value?(doc.root, 'CONFIG/@overrideMode', 'Deny')
 

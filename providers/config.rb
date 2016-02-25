@@ -25,6 +25,8 @@ include Chef::Mixin::ShellOut
 include Opscode::IIS::Helper
 include Opscode::IIS::Processors
 
+use_inline_resources
+
 # :config deprecated, use :set instead
 action :config do
   new_resource.updated_by_last_action(true) if config

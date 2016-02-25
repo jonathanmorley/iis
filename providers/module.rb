@@ -23,6 +23,8 @@ include Chef::Mixin::ShellOut
 include Opscode::IIS::Helper
 include Opscode::IIS::Processors
 
+use_inline_resources
+
 # Support whyrun
 def whyrun_supported?
   true
