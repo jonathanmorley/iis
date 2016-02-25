@@ -1,5 +1,12 @@
-# Use Travis's cointainer based infrastructure
+# Use Travis's container based infrastructure
 sudo: required
 
 rvm:
   - 2.0.0
+
+install:
+  - sudo apt-get update -q
+  - sudo apt-get install -q virtualbox --fix-missing
+  - sudo wget -nv https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb
+  - sudo dpkg -i vagrant_1.7.2_x86_64.deb
+  - bundle install
