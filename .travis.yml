@@ -15,3 +15,8 @@ install:
   - sudo dpkg -i vagrant_1.8.1_x86_64.deb
   - bundle install
   - vagrant plugin install vagrant-winrm
+
+script:
+  - kitchen create
+  - cd .kitchen/kitchen-vagrant/kitchen-iis-default-win2008r2-chef11
+  - VAGRANT_LOG=debug vagrant up
