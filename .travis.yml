@@ -16,8 +16,7 @@ install:
   - sudo dpkg -i vagrant_1.8.1_x86_64.deb
   - bundle install
   - vagrant plugin install vagrant-winrm
+  - sudo usermod -a -G vboxusers $USER
 
 script:
-  - kitchen create
-  - ls -aR
-  - sh -c "cd .kitchen/kitchen-vagrant/kitchen-iis-default-win2012r2-chef11 && VAGRANT_LOG=debug sudo vagrant up"
+  - sudo -E su $USER -c 'rake'
