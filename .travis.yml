@@ -1,6 +1,5 @@
-# Use Travis' Trusty Beta
+# Use Travis
 sudo: required
-dist: trusty
 
 rvm:
   - 2.0.0
