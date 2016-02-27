@@ -1,5 +1,6 @@
-# Use Travis's container based infrastructure
+# Use Travis' Trusty Beta
 sudo: required
+dist: trusty
 
 rvm:
   - 2.0.0
@@ -19,4 +20,4 @@ install:
 script:
   - kitchen create
   - ls -aR
-  - sh -c "cd .kitchen/kitchen-vagrant/kitchen-iis-default-win2012r2-chef11 && VAGRANT_LOG=debug vagrant up"
+  - sh -c "cd .kitchen/kitchen-vagrant/kitchen-iis-default-win2012r2-chef11 && VAGRANT_LOG=debug sudo vagrant up"
