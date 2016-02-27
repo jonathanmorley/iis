@@ -21,5 +21,6 @@ install:
 script:
   - which bundle
   - echo $PATH
-  - sudo -E su $USER -c 'echo $PATH'
-  - sudo -E su $USER -c 'bundle exec rake'
+  - echo $USER
+  - sudo -E -u $USER -c 'echo $PATH'
+  - sudo -E -u $USER -c 'bundle exec rake'
