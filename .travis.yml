@@ -19,4 +19,7 @@ install:
   - sudo usermod -a -G vboxusers $USER
 
 script:
+  - which bundle
+  - echo $PATH
+  - sudo -E su $USER -c 'echo $PATH'
   - sudo -E su $USER -c 'bundle exec rake'
