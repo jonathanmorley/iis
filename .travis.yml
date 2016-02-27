@@ -17,6 +17,4 @@ install:
   - vagrant plugin install vagrant-winrm
 
 script:
-  - kitchen create
-  - ls -aR
-  - sh -c "cd .kitchen/kitchen-vagrant/kitchen-iis-default-win2012r2-chef11 && VAGRANT_LOG=debug sudo vagrant up"
+  - sudo rake
