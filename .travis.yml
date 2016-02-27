@@ -22,5 +22,5 @@ script:
   - which bundle
   - echo $PATH
   - echo $USER
-  - sudo -E su $USER -p -c 'echo $PATH'
-  - sudo -E su $USER -p -c 'bundle exec rake'
+  - sudo -u $USER -E env "PATH=$PATH" echo $PATH
+  - sudo -u $USER -E env "PATH=$PATH" bundle exec rake
